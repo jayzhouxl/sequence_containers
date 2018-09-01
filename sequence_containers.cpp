@@ -21,7 +21,7 @@ class SeqContain {
     std::cout << "插入：" << end_tv.tv_sec - start_tv.tv_sec <<"s " <<  abs(end_tv.tv_usec - start_tv.tv_usec) << "microsecond" << std::endl;
 
     gettimeofday(&start_tv, NULL);
-    typename T_CON::iterator it = find(v_con.begin(), v_con.end(), N/2);
+    typename T_CON::iterator it = find(v_con.begin(), v_con.end(), N/2);   //这边要注意typenmae明确告诉编译器T_CON是个类型表示的
     gettimeofday(&end_tv, NULL);
     std::cout << "查找:" << end_tv.tv_sec - start_tv.tv_sec <<"s " <<  abs(end_tv.tv_usec - start_tv.tv_usec) << "microsecond" << std::endl;
 
